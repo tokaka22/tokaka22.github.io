@@ -277,7 +277,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-11-16 16:11:04" itemprop="dateModified" datetime="2021-11-16T16:11:04+08:00">2021-11-16</time>
+        <time title="Modified: 2021-11-16 16:27:44" itemprop="dateModified" datetime="2021-11-16T16:27:44+08:00">2021-11-16</time>
       </span>
 
   
@@ -290,14 +290,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="framework">1 Framework</h1>
+          <h1 id="framework">Framework</h1>
 <ul>
 <li>Encoder-Decoder based.</li>
 <li>Use attention only which is different form <strong>seq2seq</strong> with attention.</li>
 </ul>
 <p><img src="https://cdn.jsdelivr.net/gh/tokaka22/blog-img/transformer/0.png"></p>
 <p><strong>PS:</strong> Embedding + Positional encoding.</p>
-<h2 id="multi-head-attention">1.1 Multi-head attention</h2>
+<h2 id="multi-head-attention">Multi-head attention</h2>
 <p><img src="https://cdn.jsdelivr.net/gh/tokaka22/blog-img/transformer/1.1-1.png"></p>
 <p>For the same key, value, query, would like extract different information.</p>
 <ul>
@@ -310,10 +310,10 @@
 <p><strong>Mathematical formula:</strong></p>
 <p><img src="https://cdn.jsdelivr.net/gh/tokaka22/blog-img/transformer/1.1-2.png"></p>
 <p><span class="math inline">\(W_i^{(q)}\)</span> corresponds FC Layer; <span class="math inline">\(f(...)\)</span> means Attention Block; <span class="math inline">\(\begin{bmatrix}h_1\\\vdots\\ h_h\end{bmatrix}\)</span> corresponds Concat Block.</p>
-<h2 id="masked-multi-head-attention">1.2 Masked multi-head attention</h2>
+<h2 id="masked-multi-head-attention">Masked multi-head attention</h2>
 <p>When decode one output element, no need to consider the sequence after the current element.</p>
 <p><strong>Mask: </strong>When calculate the output of <span class="math inline">\(x_i\)</span>, pretend the length of sequence is <span class="math inline">\(i.\)</span></p>
-<h2 id="positionwise-ffn-feed-forward-network">1.3 Positionwise FFN (Feed-forward Network)</h2>
+<h2 id="positionwise-ffn-feed-forward-network">Positionwise FFN (Feed-forward Network)</h2>
 <hr />
 <h3 id="convolution-layer-essentially-fc-layer"><span class="math inline">\(1*1\)</span> Convolution Layer ( Essentially FC Layer )</h3>
 <p><img src="https://cdn.jsdelivr.net/gh/tokaka22/blog-img/transformer/1.3-1.png"></p>
@@ -329,7 +329,7 @@
 </ul></li>
 <li><span class="math inline">\(2nd\ FC\ Layer:\)</span> convert from <span class="math inline">\((bn, d)\)</span> to <span class="math inline">\((b, n, d)\)</span>.</li>
 </ul>
-<h2 id="layer-normalization">1.4 Layer Normalization</h2>
+<h2 id="layer-normalization">Layer Normalization</h2>
 <p><img src="https://cdn.jsdelivr.net/gh/tokaka22/blog-img/transformer/1.4-1.png"></p>
 <p>Subgraph on the left: It's residual structure. Block can be multi-head attention or positionwise FFN.</p>
 <p>Batch Normalization work on each channel/feature.</p>
@@ -340,7 +340,7 @@
 <ul>
 <li>Although the length will also change, experimental result is more stable.</li>
 </ul>
-<p>## 1.5 Information transfer (form encoder to decoder)</p>
+<p>## Information transfer (form encoder to decoder)</p>
 <p><img src="https://cdn.jsdelivr.net/gh/tokaka22/blog-img/transformer/1.5-1.png"></p>
 <p><span class="math inline">\(y_1,\cdots,y_n\)</span>: are the output of enconder, which are as key&amp;value in decoder ( <em>red box</em> ).</p>
 <ul>
@@ -352,20 +352,20 @@
 <li>Same number of blocks: means same depth.</li>
 <li>Same dimension: ?</li>
 </ul>
-<h2 id="prediction">1.6 Prediction</h2>
+<h2 id="prediction">Prediction</h2>
 <p>When predict the <span class="math inline">\({t+1}_{th}\)</span> output, decoder have the previous <span class="math inline">\(t\)</span> predicted values.</p>
 <ul>
 <li>The previous <span class="math inline">\(t\)</span> predicted values as key &amp; value.</li>
 <li><span class="math inline">\(t_{th}\)</span> as key &amp; value &amp; query.</li>
 </ul>
 <p><img src="https://cdn.jsdelivr.net/gh/tokaka22/blog-img/transformer/1.6-1.png"></p>
-<h1 id="summary">2 Summary</h1>
+<h1 id="summary">Summary</h1>
 <ul>
 <li>Transformer is an encoder-decoder with attention purely.</li>
 <li>Encoder and decoder both have <span class="math inline">\(n\)</span> transformer blocks.</li>
 <li>Transformer block has multi-head attention, positionwise FFN and layer normlization.</li>
 </ul>
-<h1 id="code">3 Code</h1>
+<h1 id="code">Code</h1>
 
       
     </div>

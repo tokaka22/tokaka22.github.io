@@ -21,36 +21,36 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":"ture","version":"8.8.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="1 Framework Encoder-Decoder based. Use attention only which is different form seq2seq with attention.    PS: Embedding + Positional encoding. 1.1 Multi-head attention  For the same key, value, query,">
+<meta name="description" content="1 Framework  Encoder-Decoder based. Use attention only which is different form seq2seq with attention.   PS: Embedding + Positional encoding. 1.1 Multi-head attention  For the same key, value">
 <meta property="og:type" content="article">
-<meta property="og:title" content="transformer">
+<meta property="og:title" content="Transformer">
 <meta property="og:url" content="http://example.com/2021/11/15/Transformer/index.html">
 <meta property="og:site_name" content="tokaka22">
-<meta property="og:description" content="1 Framework Encoder-Decoder based. Use attention only which is different form seq2seq with attention.    PS: Embedding + Positional encoding. 1.1 Multi-head attention  For the same key, value, query,">
+<meta property="og:description" content="1 Framework  Encoder-Decoder based. Use attention only which is different form seq2seq with attention.   PS: Embedding + Positional encoding. 1.1 Multi-head attention  For the same key, value">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://github.com/tokaka22/blog-img/blob/main/transformer/0.png?raw=true">
-<meta property="og:image" content="https://github.com/tokaka22/blog-img/blob/main/transformer/1.1-1.png?raw=true">
-<meta property="og:image" content="https://github.com/tokaka22/blog-img/blob/main/transformer/1.1-2.png?raw=true">
-<meta property="og:image" content="https://github.com/tokaka22/blog-img/blob/main/transformer/1.3-1.png?raw=true">
-<meta property="og:image" content="https://github.com/tokaka22/blog-img/blob/main/transformer/1.4-1.png?raw=true">
-<meta property="og:image" content="https://github.com/tokaka22/blog-img/blob/main/transformer/1.5-1.png?raw=true">
-<meta property="og:image" content="https://github.com/tokaka22/blog-img/blob/main/transformer/1.6-1.png?raw=true">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/tokaka22/blog-img/transformer/0.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/tokaka22/blog-img/transformer/1.1-1.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/tokaka22/blog-img/transformer/1.1-2.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/tokaka22/blog-img/transformer/1.3-1.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/tokaka22/blog-img/transformer/1.4-1.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/tokaka22/blog-img/transformer/1.5-1.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/tokaka22/blog-img/transformer/1.6-1.png">
 <meta property="article:published_time" content="2021-11-15T13:04:20.000Z">
-<meta property="article:modified_time" content="2021-11-16T07:43:01.498Z">
+<meta property="article:modified_time" content="2021-11-16T08:11:04.944Z">
 <meta property="article:author" content="Yuxiao Hu">
 <meta property="article:tag" content="attention">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://github.com/tokaka22/blog-img/blob/main/transformer/0.png?raw=true">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/tokaka22/blog-img/transformer/0.png">
 
 
 <link rel="canonical" href="http://example.com/2021/11/15/Transformer/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2021/11/15/Transformer/","path":"2021/11/15/Transformer/","title":"transformer"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2021/11/15/Transformer/","path":"2021/11/15/Transformer/","title":"Transformer"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>transformer | tokaka22</title>
+<title>Transformer | tokaka22</title>
   
 
 
@@ -96,7 +96,6 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
         <li class="menu-item menu-item-docs"><a href="/docs/" rel="section"><i class="fa fa-book fa-fw"></i>Docs</a></li>
         <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
@@ -130,7 +129,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Framework"><span class="nav-number">1.</span> <span class="nav-text">1 Framework</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Multi-head-attention"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 Multi-head attention</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Masked-multi-head-attention"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 Masked multi-head attention</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-Positionwise-FFN-Feed-forward-Network"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 Positionwise FFN (Feed-forward Network)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-Convolution-Layer-Essentially-FC-Layer"><span class="nav-number">1.3.1.</span> <span class="nav-text">$1*1$ Convolution Layer ( Essentially FC Layer )</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-Layer-Normalization"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 Layer Normalization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-Information-transfer-form-encoder-to-decoder"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 Information transfer (form encoder to decoder)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-6-Prediction"><span class="nav-number">1.6.</span> <span class="nav-text">1.6 Prediction</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Summary"><span class="nav-number">2.</span> <span class="nav-text">2 Summary</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#framework"><span class="nav-number">1.</span> <span class="nav-text">1 Framework</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#multi-head-attention"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 Multi-head attention</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#masked-multi-head-attention"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 Masked multi-head attention</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#positionwise-ffn-feed-forward-network"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 Positionwise FFN (Feed-forward Network)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#convolution-layer-essentially-fc-layer"><span class="nav-number">1.3.1.</span> <span class="nav-text">\(1*1\) Convolution Layer ( Essentially FC Layer )</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#layer-normalization"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 Layer Normalization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#prediction"><span class="nav-number">1.5.</span> <span class="nav-text">1.6 Prediction</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#summary"><span class="nav-number">2.</span> <span class="nav-text">2 Summary</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#code"><span class="nav-number">3.</span> <span class="nav-text">3 Code</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -204,7 +203,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          transformer
+          Transformer
         </h1>
 
         <div class="post-meta-container">
@@ -222,7 +221,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-11-16 15:43:01" itemprop="dateModified" datetime="2021-11-16T15:43:01+08:00">2021-11-16</time>
+        <time title="Modified: 2021-11-16 16:11:04" itemprop="dateModified" datetime="2021-11-16T16:11:04+08:00">2021-11-16</time>
       </span>
 
   
@@ -235,60 +234,61 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="1-Framework"><a href="#1-Framework" class="headerlink" title="1 Framework"></a>1 Framework</h1><ul>
+        <h1 id="framework">1 Framework</h1>
+<ul>
 <li>Encoder-Decoder based.</li>
 <li>Use attention only which is different form <strong>seq2seq</strong> with attention.</li>
 </ul>
-<img src="https://github.com/tokaka22/blog-img/blob/main/transformer/0.png?raw=true">
-
+<p><img src="https://cdn.jsdelivr.net/gh/tokaka22/blog-img/transformer/0.png"></p>
 <p><strong>PS:</strong> Embedding + Positional encoding.</p>
-<h2 id="1-1-Multi-head-attention"><a href="#1-1-Multi-head-attention" class="headerlink" title="1.1 Multi-head attention"></a>1.1 Multi-head attention</h2><img src="https://github.com/tokaka22/blog-img/blob/main/transformer/1.1-1.png?raw=true">
-
+<h2 id="multi-head-attention">1.1 Multi-head attention</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/tokaka22/blog-img/transformer/1.1-1.png"></p>
 <p>For the same key, value, query, would like extract different information.</p>
 <ul>
 <li>eg: short distance &amp; long distance.</li>
 </ul>
-<p>Multi-head attention uses $h$ independent attention poolings.</p>
+<p>Multi-head attention uses <span class="math inline">\(h\)</span> independent attention poolings.</p>
 <ul>
 <li>Concat each independent attention poolings then get the final output.</li>
 </ul>
 <p><strong>Mathematical formula:</strong></p>
-<img src="https://github.com/tokaka22/blog-img/blob/main/transformer/1.1-2.png?raw=true">
-
-<p>$W_i^{(q)}$ corresponds FC Layer; $f(…)$ means Attention Block; $\begin{bmatrix}h_1\\vdots\ h_h\end{bmatrix}$ corresponds Concat Block.</p>
-<h2 id="1-2-Masked-multi-head-attention"><a href="#1-2-Masked-multi-head-attention" class="headerlink" title="1.2 Masked multi-head attention"></a>1.2 Masked multi-head attention</h2><p>When decode one output element, no need to consider the sequence after the current element.</p>
-<p>**Mask: **When calculate the output of $x_i$, pretend the length of sequence is $i.$</p>
-<h2 id="1-3-Positionwise-FFN-Feed-forward-Network"><a href="#1-3-Positionwise-FFN-Feed-forward-Network" class="headerlink" title="1.3 Positionwise FFN (Feed-forward Network)"></a>1.3 Positionwise FFN (Feed-forward Network)</h2><hr>
-<h3 id="1-1-Convolution-Layer-Essentially-FC-Layer"><a href="#1-1-Convolution-Layer-Essentially-FC-Layer" class="headerlink" title="$1*1$ Convolution Layer ( Essentially FC Layer )"></a>$1*1$ Convolution Layer ( Essentially FC Layer )</h3><img src="https://github.com/tokaka22/blog-img/blob/main/transformer/1.3-1.png?raw=true">
-
+<p><img src="https://cdn.jsdelivr.net/gh/tokaka22/blog-img/transformer/1.1-2.png"></p>
+<p><span class="math inline">\(W_i^{(q)}\)</span> corresponds FC Layer; <span class="math inline">\(f(...)\)</span> means Attention Block; <span class="math inline">\(\begin{bmatrix}h_1\\\vdots\\ h_h\end{bmatrix}\)</span> corresponds Concat Block.</p>
+<h2 id="masked-multi-head-attention">1.2 Masked multi-head attention</h2>
+<p>When decode one output element, no need to consider the sequence after the current element.</p>
+<p><strong>Mask: </strong>When calculate the output of <span class="math inline">\(x_i\)</span>, pretend the length of sequence is <span class="math inline">\(i.\)</span></p>
+<h2 id="positionwise-ffn-feed-forward-network">1.3 Positionwise FFN (Feed-forward Network)</h2>
+<hr />
+<h3 id="convolution-layer-essentially-fc-layer"><span class="math inline">\(1*1\)</span> Convolution Layer ( Essentially FC Layer )</h3>
+<p><img src="https://cdn.jsdelivr.net/gh/tokaka22/blog-img/transformer/1.3-1.png"></p>
 <blockquote>
-<p>It is equivalent to $FC\ Layer$ with the input shape of $n_hn_w<em>c_i$ and weight of $c_o</em>c_i$. $n_h,n_w$ are the input image’s shape.</p>
+<p>It is equivalent to <span class="math inline">\(FC\ Layer\)</span> with the input shape of <span class="math inline">\(n_hn_w*c_i\)</span> and weight of <span class="math inline">\(c_o*c_i\)</span>. <span class="math inline">\(n_h,n_w\)</span> are the input image's shape.</p>
 </blockquote>
-<hr>
-<p>There are 2 “FC Layer”,  which is same with $1*1$ Convolution Layer. Positionwise FFN is FC Layer essentially.</p>
+<hr />
+<p>There are 2 "FC Layer", which is same with <span class="math inline">\(1*1\)</span> Convolution Layer. Positionwise FFN is FC Layer essentially.</p>
 <ul>
-<li>$1st\ FC\ Layer:$ Input shape convert from $(b, n, d)$ to $(bn, d)$.<ul>
-<li>$b$ - batch; $n$ - the length of sequence; $d$ - dimension .</li>
+<li><span class="math inline">\(1st\ FC\ Layer:\)</span> Input shape convert from <span class="math inline">\((b, n, d)\)</span> to <span class="math inline">\((bn, d)\)</span>.
+<ul>
+<li><span class="math inline">\(b\)</span> - batch; <span class="math inline">\(n\)</span> - the length of sequence; <span class="math inline">\(d\)</span> - dimension .</li>
+</ul></li>
+<li><span class="math inline">\(2nd\ FC\ Layer:\)</span> convert from <span class="math inline">\((bn, d)\)</span> to <span class="math inline">\((b, n, d)\)</span>.</li>
 </ul>
-</li>
-<li>$2nd\ FC\ Layer:$ convert from $(bn, d)$ to $(b, n, d)$.</li>
-</ul>
-<h2 id="1-4-Layer-Normalization"><a href="#1-4-Layer-Normalization" class="headerlink" title="1.4 Layer Normalization"></a>1.4 Layer Normalization</h2><img src="https://github.com/tokaka22/blog-img/blob/main/transformer/1.4-1.png?raw=true">
-
-<p>Subgraph on the left: It’s residual structure. Block can be multi-head attention or positionwise FFN. </p>
+<h2 id="layer-normalization">1.4 Layer Normalization</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/tokaka22/blog-img/transformer/1.4-1.png"></p>
+<p>Subgraph on the left: It's residual structure. Block can be multi-head attention or positionwise FFN.</p>
 <p>Batch Normalization work on each channel/feature.</p>
 <ul>
 <li>Not suitable for NLP: because the length of sequence will change, the data distribution and experimental result are unstable.</li>
 </ul>
 <p>Layer Normalization work on each sample.</p>
 <ul>
-<li>Although the length will also change,  experimental result is more stable.</li>
+<li>Although the length will also change, experimental result is more stable.</li>
 </ul>
-<h2 id="1-5-Information-transfer-form-encoder-to-decoder"><a href="#1-5-Information-transfer-form-encoder-to-decoder" class="headerlink" title="1.5 Information transfer (form encoder to decoder)"></a>1.5 Information transfer (form encoder to decoder)</h2><img src="https://github.com/tokaka22/blog-img/blob/main/transformer/1.5-1.png?raw=true">
-
-<p>$y_1,\cdots,y_n$: are the output of enconder, which are as key&amp;value in decoder (<em>red box</em>).</p>
+<p>## 1.5 Information transfer (form encoder to decoder)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/tokaka22/blog-img/transformer/1.5-1.png"></p>
+<p><span class="math inline">\(y_1,\cdots,y_n\)</span>: are the output of enconder, which are as key&amp;value in decoder ( <em>red box</em> ).</p>
 <ul>
-<li>Query (<em>red box</em>) is from targets sequence.</li>
+<li>Query ( <em>red box</em> ) is from targets sequence.</li>
 </ul>
 <p><strong>PS:</strong> Other multi-head attentions are self-attention.</p>
 <p>The above means that encoder have the same dimension and number of blocks as decoder.</p>
@@ -296,18 +296,20 @@
 <li>Same number of blocks: means same depth.</li>
 <li>Same dimension: ?</li>
 </ul>
-<h2 id="1-6-Prediction"><a href="#1-6-Prediction" class="headerlink" title="1.6 Prediction"></a>1.6 Prediction</h2><p>When predict the ${t+1}_{th}$ output, decoder have the previous $t$ predicted values.</p>
+<h2 id="prediction">1.6 Prediction</h2>
+<p>When predict the <span class="math inline">\({t+1}_{th}\)</span> output, decoder have the previous <span class="math inline">\(t\)</span> predicted values.</p>
 <ul>
-<li>The previous $t$ predicted values as key &amp; value.</li>
-<li>$t_{th}$ as key &amp; value &amp; query.</li>
+<li>The previous <span class="math inline">\(t\)</span> predicted values as key &amp; value.</li>
+<li><span class="math inline">\(t_{th}\)</span> as key &amp; value &amp; query.</li>
 </ul>
-<img src="https://github.com/tokaka22/blog-img/blob/main/transformer/1.6-1.png?raw=true">
-
-<h1 id="2-Summary"><a href="#2-Summary" class="headerlink" title="2 Summary"></a>2 Summary</h1><ul>
+<p><img src="https://cdn.jsdelivr.net/gh/tokaka22/blog-img/transformer/1.6-1.png"></p>
+<h1 id="summary">2 Summary</h1>
+<ul>
 <li>Transformer is an encoder-decoder with attention purely.</li>
-<li>Encoder and decoder both have $n$ transformer blocks.</li>
+<li>Encoder and decoder both have <span class="math inline">\(n\)</span> transformer blocks.</li>
 <li>Transformer block has multi-head attention, positionwise FFN and layer normlization.</li>
 </ul>
+<h1 id="code">3 Code</h1>
 
     </div>
 
@@ -325,7 +327,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>Post link: </strong>
-      <a href="http://example.com/2021/11/15/Transformer/" title="transformer">http://example.com/2021/11/15/Transformer/</a>
+      <a href="http://example.com/2021/11/15/Transformer/" title="Transformer">http://example.com/2021/11/15/Transformer/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -341,8 +343,8 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/11/15/Start/" rel="prev" title="start">
-                  <i class="fa fa-chevron-left"></i> start
+                <a href="/2021/11/15/Start/" rel="prev" title="Start">
+                  <i class="fa fa-chevron-left"></i> Start
                 </a>
             </div>
             <div class="post-nav-item">
@@ -391,6 +393,12 @@
   
 
 
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
 
 
 

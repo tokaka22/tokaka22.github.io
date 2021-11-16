@@ -176,7 +176,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/15/start/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/15/Start/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -189,7 +189,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/11/15/start/" class="post-title-link" itemprop="url">start</a>
+          <a href="/2021/11/15/Start/" class="post-title-link" itemprop="url">start</a>
         </h2>
 
         <div class="post-meta-container">
@@ -199,10 +199,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-11-15 19:18:03 / Modified: 21:34:41" itemprop="dateCreated datePublished" datetime="2021-11-15T19:18:03+08:00">2021-11-15</time>
+      <time title="Created: 2021-11-15 19:18:03" itemprop="dateCreated datePublished" datetime="2021-11-15T19:18:03+08:00">2021-11-15</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-11-16 10:07:28" itemprop="dateModified" datetime="2021-11-16T10:07:28+08:00">2021-11-16</time>
+      </span>
 
   
 </div>
@@ -241,7 +247,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/15/transformer/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/15/Transformer/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -254,7 +260,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/11/15/transformer/" class="post-title-link" itemprop="url">transformer</a>
+          <a href="/2021/11/15/Transformer/" class="post-title-link" itemprop="url">transformer</a>
         </h2>
 
         <div class="post-meta-container">
@@ -264,10 +270,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-11-15 21:04:20 / Modified: 21:16:06" itemprop="dateCreated datePublished" datetime="2021-11-15T21:04:20+08:00">2021-11-15</time>
+      <time title="Created: 2021-11-15 21:04:20" itemprop="dateCreated datePublished" datetime="2021-11-15T21:04:20+08:00">2021-11-15</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-11-16 15:43:01" itemprop="dateModified" datetime="2021-11-16T15:43:01+08:00">2021-11-16</time>
+      </span>
 
   
 </div>
@@ -279,11 +291,79 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Transformer"><a href="#Transformer" class="headerlink" title="Transformer"></a>Transformer</h1><h2 id="Framework"><a href="#Framework" class="headerlink" title="Framework"></a>Framework</h2><ul>
-<li>Encoder-Decoder based</li>
-<li>Use attention only which is different form <strong>seq2seq</strong> with attention</li>
+          <h1 id="1-Framework"><a href="#1-Framework" class="headerlink" title="1 Framework"></a>1 Framework</h1><ul>
+<li>Encoder-Decoder based.</li>
+<li>Use attention only which is different form <strong>seq2seq</strong> with attention.</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/tokaka22/blog-img/main/transformer/transformer-framework.svg" alt="framework"></p>
+<img src="https://github.com/tokaka22/blog-img/blob/main/transformer/0.png?raw=true">
+
+<p><strong>PS:</strong> Embedding + Positional encoding.</p>
+<h2 id="1-1-Multi-head-attention"><a href="#1-1-Multi-head-attention" class="headerlink" title="1.1 Multi-head attention"></a>1.1 Multi-head attention</h2><img src="https://github.com/tokaka22/blog-img/blob/main/transformer/1.1-1.png?raw=true">
+
+<p>For the same key, value, query, would like extract different information.</p>
+<ul>
+<li>eg: short distance &amp; long distance.</li>
+</ul>
+<p>Multi-head attention uses $h$ independent attention poolings.</p>
+<ul>
+<li>Concat each independent attention poolings then get the final output.</li>
+</ul>
+<p><strong>Mathematical formula:</strong></p>
+<img src="https://github.com/tokaka22/blog-img/blob/main/transformer/1.1-2.png?raw=true">
+
+<p>$W_i^{(q)}$ corresponds FC Layer; $f(…)$ means Attention Block; $\begin{bmatrix}h_1\\vdots\ h_h\end{bmatrix}$ corresponds Concat Block.</p>
+<h2 id="1-2-Masked-multi-head-attention"><a href="#1-2-Masked-multi-head-attention" class="headerlink" title="1.2 Masked multi-head attention"></a>1.2 Masked multi-head attention</h2><p>When decode one output element, no need to consider the sequence after the current element.</p>
+<p>**Mask: **When calculate the output of $x_i$, pretend the length of sequence is $i.$</p>
+<h2 id="1-3-Positionwise-FFN-Feed-forward-Network"><a href="#1-3-Positionwise-FFN-Feed-forward-Network" class="headerlink" title="1.3 Positionwise FFN (Feed-forward Network)"></a>1.3 Positionwise FFN (Feed-forward Network)</h2><hr>
+<h3 id="1-1-Convolution-Layer-Essentially-FC-Layer"><a href="#1-1-Convolution-Layer-Essentially-FC-Layer" class="headerlink" title="$1*1$ Convolution Layer ( Essentially FC Layer )"></a>$1*1$ Convolution Layer ( Essentially FC Layer )</h3><img src="https://github.com/tokaka22/blog-img/blob/main/transformer/1.3-1.png?raw=true">
+
+<blockquote>
+<p>It is equivalent to $FC\ Layer$ with the input shape of $n_hn_w<em>c_i$ and weight of $c_o</em>c_i$. $n_h,n_w$ are the input image’s shape.</p>
+</blockquote>
+<hr>
+<p>There are 2 “FC Layer”,  which is same with $1*1$ Convolution Layer. Positionwise FFN is FC Layer essentially.</p>
+<ul>
+<li>$1st\ FC\ Layer:$ Input shape convert from $(b, n, d)$ to $(bn, d)$.<ul>
+<li>$b$ - batch; $n$ - the length of sequence; $d$ - dimension .</li>
+</ul>
+</li>
+<li>$2nd\ FC\ Layer:$ convert from $(bn, d)$ to $(b, n, d)$.</li>
+</ul>
+<h2 id="1-4-Layer-Normalization"><a href="#1-4-Layer-Normalization" class="headerlink" title="1.4 Layer Normalization"></a>1.4 Layer Normalization</h2><img src="https://github.com/tokaka22/blog-img/blob/main/transformer/1.4-1.png?raw=true">
+
+<p>Subgraph on the left: It’s residual structure. Block can be multi-head attention or positionwise FFN. </p>
+<p>Batch Normalization work on each channel/feature.</p>
+<ul>
+<li>Not suitable for NLP: because the length of sequence will change, the data distribution and experimental result are unstable.</li>
+</ul>
+<p>Layer Normalization work on each sample.</p>
+<ul>
+<li>Although the length will also change,  experimental result is more stable.</li>
+</ul>
+<h2 id="1-5-Information-transfer-form-encoder-to-decoder"><a href="#1-5-Information-transfer-form-encoder-to-decoder" class="headerlink" title="1.5 Information transfer (form encoder to decoder)"></a>1.5 Information transfer (form encoder to decoder)</h2><img src="https://github.com/tokaka22/blog-img/blob/main/transformer/1.5-1.png?raw=true">
+
+<p>$y_1,\cdots,y_n$: are the output of enconder, which are as key&amp;value in decoder (<em>red box</em>).</p>
+<ul>
+<li>Query (<em>red box</em>) is from targets sequence.</li>
+</ul>
+<p><strong>PS:</strong> Other multi-head attentions are self-attention.</p>
+<p>The above means that encoder have the same dimension and number of blocks as decoder.</p>
+<ul>
+<li>Same number of blocks: means same depth.</li>
+<li>Same dimension: ?</li>
+</ul>
+<h2 id="1-6-Prediction"><a href="#1-6-Prediction" class="headerlink" title="1.6 Prediction"></a>1.6 Prediction</h2><p>When predict the ${t+1}_{th}$ output, decoder have the previous $t$ predicted values.</p>
+<ul>
+<li>The previous $t$ predicted values as key &amp; value.</li>
+<li>$t_{th}$ as key &amp; value &amp; query.</li>
+</ul>
+<img src="https://github.com/tokaka22/blog-img/blob/main/transformer/1.6-1.png?raw=true">
+
+<h1 id="2-Summary"><a href="#2-Summary" class="headerlink" title="2 Summary"></a>2 Summary</h1><ul>
+<li>Transformer is an encoder-decoder with attention purely.</li>
+<li>Encoder and decoder both have $n$ transformer blocks.</li>
+<li>Transformer block has multi-head attention, positionwise FFN and layer normlization.</li>
+</ul>
 
       
     </div>

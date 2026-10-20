@@ -4,139 +4,260 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Yuxiao Hu, PhD candidate at The Hong Kong Polytechnic University. Research in automated scientific discovery, symbolic regression, and research agents.">
-  <meta name="theme-color" content="#174fbb">
+  <meta name="theme-color" content="#f7f4ed">
   <title>Yuxiao Hu | Research</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23174fbb'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-size='21' fill='white'%3EY%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e1c19'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='22' fill='%23f7f4ed'%3EY%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/newsreader-roman.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/plex-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <div class="page">
-    <header class="site-header">
+  <header class="site-header">
+    <div class="wrap">
       <a class="wordmark" href="#about">Yuxiao Hu</a>
       <nav aria-label="Main navigation">
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
         <a href="#background">Background</a>
       </nav>
-    </header>
-    <main id="main">
-      <section class="intro" id="about" aria-labelledby="name">
-        <div class="intro-copy">
-        <p class="eyebrow">The Hong Kong Polytechnic University</p>
-        <h1 id="name">Yuxiao Hu <span lang="zh-Hans">胡愉霄</span></h1>
-        <p class="role">PhD Candidate</p>
-        <div class="bio">
-          <p>I am a PhD candidate at The Hong Kong Polytechnic University, advised by Prof. <a href="https://scholar.google.com/citations?user=hfCPxHkAAAAJ">Jinyue Yan</a> (Academician of the European Academy of Sciences and Arts) and Associate Prof. <a href="https://scholar.google.com/citations?user=nOMt_KkAAAAJ">Yuntian Chen</a>. I completed my master's at the University of Chinese Academy of Sciences under Prof. <a href="https://ic.jiangnan.edu.cn/info/1061/1788.htm">Chengxin Zhao</a>.</p>
-          <p>My research focuses on <strong>automated scientific discovery</strong>, with current interests in symbolic regression and research agents powered by large language models. I am also interested in trustworthy and reproducible evaluation, building on my earlier work in adversarial robustness.</p>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <section class="hero" id="about" aria-labelledby="name">
+        <p class="eyebrow hero-eyebrow"><span>PhD Candidate</span><span class="sep" aria-hidden="true"> · </span><span>The Hong Kong Polytechnic University</span></p>
+        <div class="hero-head">
+          <h1 id="name">Yuxiao Hu<span class="cn" lang="zh-Hans">胡愉霄</span></h1>
         </div>
-        <div class="profile-links" aria-label="Academic profiles and contact">
-          <a href="mailto:huyuxiao1205@gmail.com">Email</a>
-          <a href="https://scholar.google.com/citations?user=BlJBwgUAAAAJ">Google Scholar</a>
-          <a href="https://github.com/tokaka22">GitHub</a>
+        <figure class="portrait">
+          <img src="defense-portrait.jpg" alt="Yuxiao Hu at his graduation defense" width="630" height="840">
+        </figure>
+        <div class="hero-body">
+          <p class="thesis">Teaching machines to find the <em>laws</em> behind data.</p>
+          <p class="bio">I am a PhD candidate at The Hong Kong Polytechnic University working on <strong>automated scientific discovery</strong>: symbolic regression, and research agents powered by large language models.</p>
+          <dl class="facts">
+            <div><dt>Advisors</dt><dd>Prof. <a href="https://scholar.google.com/citations?user=hfCPxHkAAAAJ">Jinyue Yan</a> (Academician of the European Academy of Sciences and Arts) and Associate Prof. <a href="https://scholar.google.com/citations?user=nOMt_KkAAAAJ">Yuntian Chen</a></dd></div>
+            <div><dt>Master's</dt><dd>University of Chinese Academy of Sciences, under Prof. <a href="https://ic.jiangnan.edu.cn/info/1061/1788.htm">Chengxin Zhao</a></dd></div>
+          </dl>
+          <div class="pills" aria-label="Academic profiles and contact">
+            <a class="pill solid" href="mailto:huyuxiao1205@gmail.com">Email</a>
+            <a class="pill" href="https://scholar.google.com/citations?user=BlJBwgUAAAAJ">Google Scholar <span class="arr" aria-hidden="true">↗</span></a>
+            <a class="pill" href="https://github.com/tokaka22">GitHub <span class="arr" aria-hidden="true">↗</span></a>
+          </div>
         </div>
-        </div>
-        <img class="portrait" src="defense-portrait.jpg" alt="Yuxiao Hu at his graduation defense" width="630" height="840">
       </section>
 
-      <section class="research" id="research" aria-labelledby="research-title">
-        <h2 id="research-title">Research interests</h2>
-        <p>AutoResearch &amp; AI for Science <span aria-hidden="true">/</span> Symbolic regression <span aria-hidden="true">/</span> LLM research agents</p>
+      <figure class="law" aria-label="Orbital period against semi-major axis for six planets, following Kepler's third law">
+        <figcaption class="law-caption"><span class="law-eq">T² = a³</span><span class="law-note">Six planets · Kepler's third law</span></figcaption>
+<svg class="law-plot law-wide" viewBox="0 0 1040 190" aria-hidden="true" focusable="false">
+<line class="law-axis" x1="8" y1="168" x2="1000" y2="168"/>
+<path class="law-curve" d="M32.8 167.4 L43.4 166.9 L54.0 166.4 L64.5 165.8 L75.1 165.2 L85.7 164.5 L96.3 163.8 L106.9 163.0 L117.5 162.1 L128.0 161.3 L138.6 160.4 L149.2 159.4 L159.8 158.4 L170.4 157.4 L180.9 156.4 L191.5 155.3 L202.1 154.2 L212.7 153.0 L223.3 151.9 L233.8 150.7 L244.4 149.4 L255.0 148.2 L265.6 146.9 L276.2 145.6 L286.8 144.2 L297.3 142.8 L307.9 141.5 L318.5 140.0 L329.1 138.6 L339.7 137.1 L350.2 135.6 L360.8 134.1 L371.4 132.6 L382.0 131.0 L392.6 129.5 L403.1 127.9 L413.7 126.2 L424.3 124.6 L434.9 122.9 L445.5 121.2 L456.1 119.5 L466.6 117.8 L477.2 116.1 L487.8 114.3 L498.4 112.5 L509.0 110.7 L519.5 108.9 L530.1 107.0 L540.7 105.2 L551.3 103.3 L561.9 101.4 L572.4 99.5 L583.0 97.5 L593.6 95.6 L604.2 93.6 L614.8 91.6 L625.4 89.6 L635.9 87.6 L646.5 85.5 L657.1 83.5 L667.7 81.4 L678.3 79.3 L688.8 77.2 L699.4 75.1 L710.0 72.9 L720.6 70.8 L731.2 68.6 L741.7 66.4 L752.3 64.2 L762.9 62.0 L773.5 59.8 L784.1 57.5 L794.7 55.2 L805.2 53.0 L815.8 50.7 L826.4 48.4 L837.0 46.0 L847.6 43.7 L858.1 41.3 L868.7 39.0 L879.3 36.6 L889.9 34.2 L900.5 31.7 L911.1 29.3 L921.6 26.9 L932.2 24.4 L942.8 21.9 L953.4 19.5 L964.0 17.0 L974.5 14.4 L985.1 11.9" pathLength="1"/>
+<circle class="law-point" style="--i:0" cx="46.4" cy="166.8" r="3.4"/>
+<circle class="law-point" style="--i:1" cx="79.7" cy="164.9" r="3.4"/>
+<circle class="law-point" style="--i:2" cx="107.2" cy="163.0" r="3.4"/>
+<text class="law-label" style="--i:2" x="107.2" y="152.0" text-anchor="middle">Earth</text>
+<circle class="law-point" style="--i:3" cx="159.2" cy="158.5" r="3.4"/>
+<circle class="law-point" style="--i:4" cx="524.1" cy="108.1" r="3.4"/>
+<text class="law-label" style="--i:4" x="533.1" y="123.1" text-anchor="start">Jupiter</text>
+<circle class="law-point" style="--i:5" cx="954.1" cy="19.3" r="3.4"/>
+<text class="law-label" style="--i:5" x="964.1" y="34.3" text-anchor="start">Saturn</text>
+<text class="law-unit" x="1000" y="184" text-anchor="end">a (AU)</text>
+</svg>
+<svg class="law-plot law-narrow" viewBox="0 0 350 170" aria-hidden="true" focusable="false">
+<line class="law-axis" x1="4" y1="148" x2="336" y2="148"/>
+<path class="law-curve" d="M12.3 147.4 L15.8 147.1 L19.4 146.6 L22.9 146.1 L26.5 145.5 L30.0 144.9 L33.5 144.3 L37.1 143.6 L40.6 142.8 L44.2 142.1 L47.7 141.3 L51.3 140.4 L54.8 139.6 L58.3 138.7 L61.9 137.7 L65.4 136.8 L69.0 135.8 L72.5 134.8 L76.0 133.7 L79.6 132.7 L83.1 131.6 L86.7 130.5 L90.2 129.3 L93.8 128.2 L97.3 127.0 L100.8 125.8 L104.4 124.6 L107.9 123.3 L111.5 122.0 L115.0 120.7 L118.5 119.4 L122.1 118.1 L125.6 116.7 L129.2 115.4 L132.7 114.0 L136.2 112.6 L139.8 111.1 L143.3 109.7 L146.9 108.2 L150.4 106.7 L154.0 105.2 L157.5 103.7 L161.0 102.1 L164.6 100.6 L168.1 99.0 L171.7 97.4 L175.2 95.8 L178.7 94.2 L182.3 92.5 L185.8 90.9 L189.4 89.2 L192.9 87.5 L196.4 85.8 L200.0 84.0 L203.5 82.3 L207.1 80.5 L210.6 78.8 L214.2 77.0 L217.7 75.2 L221.2 73.4 L224.8 71.5 L228.3 69.7 L231.9 67.8 L235.4 65.9 L238.9 64.1 L242.5 62.2 L246.0 60.2 L249.6 58.3 L253.1 56.4 L256.7 54.4 L260.2 52.4 L263.7 50.4 L267.3 48.4 L270.8 46.4 L274.4 44.4 L277.9 42.3 L281.4 40.3 L285.0 38.2 L288.5 36.1 L292.1 34.0 L295.6 31.9 L299.1 29.8 L302.7 27.7 L306.2 25.5 L309.8 23.4 L313.3 21.2 L316.9 19.0 L320.4 16.8 L323.9 14.6 L327.5 12.4 L331.0 10.2" pathLength="1"/>
+<circle class="law-point" style="--i:0" cx="16.8" cy="146.9" r="3.4"/>
+<circle class="law-point" style="--i:1" cx="28.0" cy="145.3" r="3.4"/>
+<circle class="law-point" style="--i:2" cx="37.2" cy="143.5" r="3.4"/>
+<circle class="law-point" style="--i:3" cx="54.6" cy="139.6" r="3.4"/>
+<circle class="law-point" style="--i:4" cx="176.7" cy="95.1" r="3.4"/>
+<text class="law-label" style="--i:4" x="184.7" y="110.1" text-anchor="start">Jupiter</text>
+<circle class="law-point" style="--i:5" cx="320.6" cy="16.7" r="3.4"/>
+<text class="law-label" style="--i:5" x="312.6" y="11.7" text-anchor="end">Saturn</text>
+<text class="law-unit" x="336" y="164" text-anchor="end">a (AU)</text>
+</svg>
+      </figure>
+
+      <section class="section" id="research" aria-labelledby="research-title">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Research</span>
+            <h2 id="research-title">Automated scientific <em>discovery</em></h2>
+          </div>
+          <p class="lead">I study how machines can go from fitting data to stating scientific laws: searching for interpretable equations, and building LLM agents that propose, test and revise the conjectures behind them.</p>
+        </div>
+        <ol class="themes">
+          <li class="theme">
+            <span class="theme-num" aria-hidden="true">01</span>
+            <h3>Symbolic regression</h3>
+            <p>Finding compact, interpretable equations efficiently: generative equation spaces, auxiliary search subspaces shared across solvers, and agent harnesses whose prompts and workflows are optimized jointly.</p>
+            <ul class="theme-refs"><li><a href="#p-dass">DASS</a></li><li><a href="#p-gensr">GenSR</a></li><li><a href="#p-harnesssr">HarnessSR</a></li></ul>
+          </li>
+          <li class="theme">
+            <span class="theme-num" aria-hidden="true">02</span>
+            <h3>LLM research agents</h3>
+            <p>Agents that pursue scientific conjectures rather than single expressions: they model, ask questions and run experiments, then revise their conjectures with the evidence.</p>
+            <ul class="theme-refs"><li><a href="#p-scope">SCOPE</a></li></ul>
+          </li>
+          <li class="theme">
+            <span class="theme-num" aria-hidden="true">03</span>
+            <h3>Trustworthy evaluation</h3>
+            <p>Benchmarks that score the evidence behind a discovery, not only the recovered equation, grounded in my earlier work on adversarial robustness.</p>
+            <ul class="theme-refs"><li><a href="#p-scope">ClosureBench</a></li><li><a href="#p-hiders">Focus on Hiders</a></li><li><a href="#p-gmaa">GMAA</a></li></ul>
+          </li>
+        </ol>
+        <p class="earlier"><span class="eyebrow">Earlier</span>LLMs for time series (<a href="#p-context">ICLR 2025</a>), PM<sub>2.5</sub> forecasting (<a href="#p-envint">Environment International 2024</a>), and fast multi-track locating for single-event effect testing (<a href="#p-nst">Nuclear Science and Techniques 2023</a>).</p>
       </section>
 
-      <section id="publications" aria-labelledby="publications-title">
-        <div class="section-heading">
-          <h2 id="publications-title">Selected publications</h2>
-          <a href="https://scholar.google.com/citations?user=BlJBwgUAAAAJ">Full list on Scholar</a>
+      <section class="section" id="publications" aria-labelledby="publications-title">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Publications</span>
+            <h2 id="publications-title">Selected papers</h2>
+          </div>
+          <a class="aside-link" href="https://scholar.google.com/citations?user=BlJBwgUAAAAJ">Full list on Google Scholar ↗</a>
         </div>
         <ol class="papers">
-          <li class="paper">
-            <div class="venue"><span>NeurIPS</span><span>2026</span></div>
+          <li class="paper" id="p-dass">
+            <div class="venue"><span class="venue-name">NeurIPS</span><span class="venue-meta">2026 · <span class="flag">Accepted</span></span></div>
             <div class="paper-content">
-              <h3>DASS: A Solver-Agnostic Dynamic Auxiliary Search Strategy for Symbolic Regression</h3>
-              <p class="authors"><strong>Yuxiao Hu</strong> et al.</p>
-              <p class="paper-note">Dynamic auxiliary search for symbolic regression across solvers.</p>
-              <p class="status">Accepted</p>
+              <h3><a href="https://arxiv.org/abs/2610.16812">DASS: A Solver-Adaptable Dynamic Auxiliary Search Strategy for Symbolic Regression</a></h3>
+              <p class="authors"><strong>Yuxiao Hu</strong>, Qian Li, Ding Wang, Yekun Zheng, Jinyue Yan, Yuntian Chen</p>
+              <p class="summary">A shareable search strategy that plugs into different SR solvers, building and refining a subspace of high-potential basis terms; on LLM-SRBench it <strong>nearly doubles average accuracy with a 24% runtime increase</strong>.</p>
+              <div class="links"><a href="https://arxiv.org/abs/2610.16812">arXiv</a><a href="https://github.com/SR-Store/NeurIPS2026-DASS">Code</a></div>
             </div>
           </li>
-          <li class="paper">
-            <div class="venue"><span>ICLR</span><span>2026</span></div>
+          <li class="paper" id="p-gensr">
+            <div class="venue"><span class="venue-name">ICLR</span><span class="venue-meta">2026</span></div>
             <div class="paper-content">
               <h3><a href="https://openreview.net/forum?id=8emIjwUQZg">GenSR: Symbolic Regression Based on Equation Generative Space</a></h3>
               <p class="authors">Qian Li, <strong>Yuxiao Hu</strong>, Juncheng Liu, Yuntian Chen</p>
-              <p class="paper-note">Learning an equation generative space for symbolic regression.</p>
-              <div class="paper-links"><a href="https://openreview.net/forum?id=8emIjwUQZg">Paper</a><a href="https://github.com/SR-Store/ICLR26-GenSR">Code</a></div>
+              <p class="summary">Maps equations into a generative latent space that is symbolically continuous and numerically smooth, then searches it coarse to fine, <strong>consistently on the rank-1 Pareto front of accuracy, simplicity and runtime</strong>.</p>
+              <div class="links"><a href="https://openreview.net/forum?id=8emIjwUQZg">Paper</a><a href="https://github.com/SR-Store/ICLR26-GenSR">Code</a></div>
             </div>
           </li>
-          <li class="paper">
-            <div class="venue"><span>ICLR</span><span>2025</span></div>
+          <li class="paper" id="p-context">
+            <div class="venue"><span class="venue-name">ICLR</span><span class="venue-meta">2025</span></div>
             <div class="paper-content">
               <h3><a href="https://proceedings.iclr.cc/paper_files/paper/2025/hash/e1de63ec74f40d3234c4e053f3528e18-Abstract-Conference.html">Context-Alignment: Activating and Enhancing LLMs Capabilities in Time Series</a></h3>
               <p class="authors"><strong>Yuxiao Hu</strong>, Qian Li, Dongxiao Zhang, Jinyue Yan, Yuntian Chen</p>
-              <p class="paper-note">Aligning time series with linguistic context to activate LLM capabilities.</p>
-              <div class="paper-links"><a href="https://proceedings.iclr.cc/paper_files/paper/2025/hash/e1de63ec74f40d3234c4e053f3528e18-Abstract-Conference.html">Paper</a><a href="https://github.com/tokaka22/ICLR25-FSCA">Code</a></div>
+              <p class="summary">Aligns time series with the linguistic structure and logic LLMs already understand, rather than at the token level, and is <strong>particularly effective in few-shot and zero-shot forecasting</strong>.</p>
+              <div class="links"><a href="https://proceedings.iclr.cc/paper_files/paper/2025/hash/e1de63ec74f40d3234c4e053f3528e18-Abstract-Conference.html">Paper</a><a href="https://github.com/tokaka22/ICLR25-FSCA">Code</a></div>
             </div>
           </li>
-          <li class="paper">
-            <div class="venue"><span>CVPR</span><span>2024</span></div>
+          <li class="paper" id="p-hiders">
+            <div class="venue"><span class="venue-name">CVPR</span><span class="venue-meta">2024</span></div>
             <div class="paper-content">
               <h3><a href="https://openaccess.thecvf.com/content/CVPR2024/html/Li_Focus_on_Hiders_Exploring_Hidden_Threats_for_Enhancing_Adversarial_Training_CVPR_2024_paper.html">Focus on Hiders: Exploring Hidden Threats for Enhancing Adversarial Training</a></h3>
               <p class="authors">Qian Li, <strong>Yuxiao Hu</strong>, Yinpeng Dong, Dongxiao Zhang, Yuntian Chen</p>
-              <p class="paper-note">Exploring hidden threats to improve adversarial training.</p>
-              <div class="paper-links"><a href="https://openaccess.thecvf.com/content/CVPR2024/html/Li_Focus_on_Hiders_Exploring_Hidden_Threats_for_Enhancing_Adversarial_Training_CVPR_2024_paper.html">Paper</a><a href="https://github.com/tokaka22/CVPR24-Focus-on-Hiders">Code</a></div>
+              <p class="summary">Identifies “hiders”, samples that adversarial training defends and then loses again, and trains against them alongside worst-case examples to <strong>improve accuracy and robustness together</strong>.</p>
+              <div class="links"><a href="https://openaccess.thecvf.com/content/CVPR2024/html/Li_Focus_on_Hiders_Exploring_Hidden_Threats_for_Enhancing_Adversarial_Training_CVPR_2024_paper.html">Paper</a><a href="https://github.com/tokaka22/CVPR24-Focus-on-Hiders">Code</a></div>
             </div>
           </li>
-          <li class="paper">
-            <div class="venue"><span>Journal</span><span>2024</span></div>
+          <li class="paper" id="p-envint">
+            <div class="venue"><span class="venue-name">Environ. Int.</span><span class="venue-meta">2024</span></div>
             <div class="paper-content">
               <h3><a href="https://doi.org/10.1016/j.envint.2024.108997">Domain knowledge-enhanced multi-spatial multi-temporal PM<sub>2.5</sub> forecasting with integrated monitoring and reanalysis data</a></h3>
               <p class="authors"><strong>Yuxiao Hu</strong>, Qian Li, Xiaodan Shi, Jinyue Yan, Yuntian Chen</p>
-              <p class="journal-name"><span>Environment International, 192, 108997</span><span class="journal-ranking">CAS Q1 Top</span></p>
-              <div class="paper-links"><a href="https://doi.org/10.1016/j.envint.2024.108997">Paper</a></div>
+              <p class="journal"><i>Environment International, 192, 108997</i><span class="journal-ranking">CAS Q1 Top</span></p>
+              <p class="summary">Links station-level and city-level graphs across several time scales, cutting <strong>72-hour PM<sub>2.5</sub> forecast RMSE by 6–10%</strong> relative to the strongest of nine baselines.</p>
+              <div class="links"><a href="https://doi.org/10.1016/j.envint.2024.108997">Paper</a></div>
             </div>
           </li>
-          <li class="paper">
-            <div class="venue"><span>CVPR</span><span>2023</span></div>
+          <li class="paper" id="p-gmaa">
+            <div class="venue"><span class="venue-name">CVPR</span><span class="venue-meta">2023</span></div>
             <div class="paper-content">
               <h3><a href="https://openaccess.thecvf.com/content/CVPR2023/html/Li_Discrete_Point-Wise_Attack_Is_Not_Enough_Generalized_Manifold_Adversarial_Attack_CVPR_2023_paper.html">Discrete Point-Wise Attack Is Not Enough: Generalized Manifold Adversarial Attack for Face Recognition</a></h3>
               <p class="authors">Qian Li*, <strong>Yuxiao Hu*</strong>, Ye Liu, Dongxiao Zhang, Xin Jin, Yuntian Chen</p>
-              <p class="paper-note">Manifold-based adversarial attacks for face recognition.</p>
-              <div class="paper-links"><a href="https://openaccess.thecvf.com/content/CVPR2023/html/Li_Discrete_Point-Wise_Attack_Is_Not_Enough_Generalized_Manifold_Adversarial_Attack_CVPR_2023_paper.html">Paper</a><a href="https://github.com/tokaka22/CVPR23-GMAA">Code</a><span class="equal">* Equal contribution</span></div>
+              <p class="summary">Extends face-recognition attacks from one image to many states of an identity, and from discrete points to a continuous expression manifold, for <strong>adversarial examples that generalize better with higher visual quality</strong>.</p>
+              <div class="links"><a href="https://openaccess.thecvf.com/content/CVPR2023/html/Li_Discrete_Point-Wise_Attack_Is_Not_Enough_Generalized_Manifold_Adversarial_Attack_CVPR_2023_paper.html">Paper</a><a href="https://github.com/tokaka22/CVPR23-GMAA">Code</a><span class="note">* Equal contribution</span></div>
             </div>
           </li>
-          <li class="paper">
-            <div class="venue"><span>Journal</span><span>2023</span></div>
+          <li class="paper" id="p-nst">
+            <div class="venue"><span class="venue-name">Nucl. Sci. Tech.</span><span class="venue-meta">2023</span></div>
             <div class="paper-content">
               <h3><a href="https://doi.org/10.1007/s41365-023-01222-2">An online fast multi-track locating algorithm for high-resolution single-event effect test platform</a></h3>
               <p class="authors"><strong>Yu-Xiao Hu</strong>, Hai-Bo Yang, Hong-Lin Zhang, Jian-Wei Liao, Fa-Tai Mai, Cheng-Xin Zhao</p>
-              <p class="journal-name"><span>Nuclear Science and Techniques, 34, 72</span><span class="journal-ranking">CAS Q1 Top</span></p>
-              <div class="paper-links"><a href="https://doi.org/10.1007/s41365-023-01222-2">Paper</a></div>
+              <p class="journal"><i>Nuclear Science and Techniques, 34, 72</i><span class="journal-ranking">CAS Q1 Top</span></p>
+              <p class="summary">A slot-based encoder–decoder that locates every heavy-ion track online for the Hi'Beam-SEE platform, at <strong>238 fps with a 1.62 μm standard error</strong>.</p>
+              <div class="links"><a href="https://doi.org/10.1007/s41365-023-01222-2">Paper</a></div>
+            </div>
+          </li>
+        </ol>
+
+        <div class="subhead">
+          <h3>Preprints</h3>
+          <p>Publicly available on arXiv; not yet peer-reviewed.</p>
+        </div>
+        <ol class="papers">
+          <li class="paper" id="p-scope">
+            <div class="venue"><span class="venue-name">arXiv</span><span class="venue-meta">2026 · 2610.18938</span></div>
+            <div class="paper-content">
+              <h3><a href="https://arxiv.org/abs/2610.18938">Beyond Equation Search: Conjecture-Guided Discovery with SCOPE and ClosureBench</a></h3>
+              <p class="authors"><strong>Yuxiao Hu</strong>, Qian Li, Ding Wang, Siheng Chen, Linfeng Zhang, Jinyue Yan, Yuntian Chen</p>
+              <p class="summary">Scientist agents pursue competing conjectures through equation modeling, questions and active experiments, evaluated on <strong>ClosureBench, 60 interactive closure-discovery tasks across five scientific domains</strong>.</p>
+              <div class="links"><a href="https://arxiv.org/abs/2610.18938">arXiv</a></div>
+            </div>
+          </li>
+          <li class="paper" id="p-harnesssr">
+            <div class="venue"><span class="venue-name">arXiv</span><span class="venue-meta">2026 · 2610.16966</span></div>
+            <div class="paper-content">
+              <h3><a href="https://arxiv.org/abs/2610.16966">Learning to Design SR Solvers: Harness Optimization for Symbolic Regression</a></h3>
+              <p class="authors">Qian Li, <strong>Yuxiao Hu</strong>, Qihao Duan, Jinyue Yan, Yuntian Chen</p>
+              <p class="summary">Treats the prompts and workflow of an SR agent as the object of optimization; on LSR-Synth it reaches <strong>61.33% mean Acc<sub>0.01</sub>, a 45% relative gain over the next-best baseline</strong>.</p>
+              <div class="links"><a href="https://arxiv.org/abs/2610.16966">arXiv</a></div>
             </div>
           </li>
         </ol>
       </section>
 
-      <section id="background" aria-labelledby="education-title">
-        <h2 id="education-title">Education</h2>
-        <dl class="timeline">
-          <div><dt>2023 - present</dt><dd><strong>The Hong Kong Polytechnic University</strong><span>PhD Candidate</span></dd></div>
-          <div><dt>2020 - 2023</dt><dd><strong>University of Chinese Academy of Sciences</strong><span>Master's in Electronic Information</span></dd></div>
-          <div><dt>2015 - 2019</dt><dd><strong>Harbin Institute of Technology</strong><span>Bachelor's in Information Management and Information Systems</span></dd></div>
-        </dl>
-        <h2 class="experience-title">Research experience</h2>
-        <dl class="timeline">
-          <div><dt>Mar - Jul 2026</dt><dd><strong>DP Technology</strong><span>Research Intern</span><span>Mentors: <a href="https://scholar.google.com/citations?user=jk7qwmcAAAAJ">Linfeng Zhang</a> and <a href="https://scholar.google.com/citations?user=W_Q33RMAAAAJ">Siheng Chen</a></span></dd></div>
-        </dl>
+      <section class="section" id="background" aria-labelledby="background-title">
+        <div class="section-head solo">
+          <div>
+            <span class="eyebrow">Background</span>
+            <h2 id="background-title">Education &amp; experience</h2>
+          </div>
+        </div>
+        <div class="cv">
+          <div>
+            <h3>Education</h3>
+            <dl class="timeline">
+              <div><dt>2023 – present</dt><dd><strong>The Hong Kong Polytechnic University</strong><span>PhD Candidate</span></dd></div>
+              <div><dt>2020 – 2023</dt><dd><strong>University of Chinese Academy of Sciences</strong><span>Master's in Electronic Information</span></dd></div>
+              <div><dt>2015 – 2019</dt><dd><strong>Harbin Institute of Technology</strong><span>Bachelor's in Information Management and Information Systems</span></dd></div>
+            </dl>
+          </div>
+          <div>
+            <h3>Research experience</h3>
+            <dl class="timeline">
+              <div><dt>Mar – Jul 2026</dt><dd><strong>DP Technology</strong><span>Research Intern</span><span>Mentors: <a href="https://scholar.google.com/citations?user=jk7qwmcAAAAJ">Linfeng Zhang</a> and <a href="https://scholar.google.com/citations?user=W_Q33RMAAAAJ">Siheng Chen</a></span></dd></div>
+            </dl>
+          </div>
+        </div>
       </section>
-      <section class="visitors" aria-label="Visitor map">
-        <a class="visitor-map" href="https://smallcounter.com/vmap/1791485562/" aria-label="View visitor map and location statistics">
-          <img data-counter-src="https://smallcounter.com/map/view.php?type=180&amp;id=1791485562" alt="" referrerpolicy="origin">
-        </a>
-        <img hidden aria-hidden="true" data-counter-src="https://smallcounter.com/count.php?c_style=5&amp;id=1791485574" alt="" referrerpolicy="origin">
-      </section>
-    </main>
-    <footer><span>Yuxiao Hu</span><a href="mailto:huyuxiao1205@gmail.com">huyuxiao1205@gmail.com</a></footer>
-  </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <span class="eyebrow">Contact</span>
+          <a class="mail" href="mailto:huyuxiao1205@gmail.com">huyuxiao1205@gmail.com</a>
+          <div class="footer-links"><a href="https://scholar.google.com/citations?user=BlJBwgUAAAAJ">Google Scholar</a><a href="https://github.com/tokaka22">GitHub</a></div>
+        </div>
+        <div class="visitors" aria-label="Visitor map">
+          <a class="visitor-map" href="https://smallcounter.com/vmap/1791485562/" aria-label="View visitor map and location statistics">
+            <img data-counter-src="https://smallcounter.com/map/view.php?type=180&amp;id=1791485562" alt="" referrerpolicy="origin">
+          </a>
+          <img hidden aria-hidden="true" data-counter-src="https://smallcounter.com/count.php?c_style=5&amp;id=1791485574" alt="" referrerpolicy="origin">
+        </div>
+      </div>
+      <div class="colophon"><span>Yuxiao Hu <span lang="zh-Hans">胡愉霄</span></span><a href="#about">Back to top ↑</a></div>
+    </div>
+  </footer>
   <script>
     const counterVisit = location.hostname === 'tokaka22.github.io' ? '&visit=' + Date.now() : '';
     document.querySelectorAll('[data-counter-src]').forEach(image => {
